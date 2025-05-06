@@ -27,18 +27,18 @@ M.open = function()
   state.buf = api.nvim_create_buf(false, true)
 
   local dim_buf = api.nvim_create_buf(false, true)
-  local dim_win = api.nvim_open_win(dim_buf, false, {
-    focusable = false,
-    row = 0,
-    col = 0,
-    width = vim.o.columns,
-    height = vim.o.lines - 2,
-    relative = "editor",
-    style = "minimal",
-    border = "none",
-  })
+  -- local dim_win = api.nvim_open_win(dim_buf, false, {
+  --   focusable = false,
+  --   row = 0,
+  --   col = 0,
+  --   width = vim.o.columns,
+  --   height = vim.o.lines - 2,
+  --   relative = "editor",
+  --   style = "minimal",
+  --   border = "none",
+  -- })
 
-  vim.wo[dim_win].winblend = 20
+  -- vim.wo[dim_win].winblend = 20
 
   utils.gen_default_lines()
 
